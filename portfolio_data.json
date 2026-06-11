@@ -1,0 +1,155 @@
+{
+  "personal": {
+    "name": "Reyizoov",
+    "title": "Full-Stack Developer",
+    "bio": "Создаю современные веб-приложения с чистым кодом и отличным UX",
+    "email": "testingnurali@gmail.com",
+    "github": "https://github.com/reyzoov",
+    "telegram": "@reeizoov",
+    "location": "Russian, Abakan"
+  },
+  "skills": [
+    {
+      "name": "Python",
+      "level": 90,
+      "category": "backend",
+      "icon": "🐍"
+    },
+    {
+      "name": "JavaScript",
+      "level": 85,
+      "category": "frontend",
+      "icon": "⚡"
+    },
+    {
+      "name": "React",
+      "level": 80,
+      "category": "frontend",
+      "icon": "⚛️"
+    },
+    {
+      "name": "Node.js",
+      "level": 75,
+      "category": "backend",
+      "icon": "🟢"
+    },
+    {
+      "name": "PostgreSQL",
+      "level": 70,
+      "category": "database",
+      "icon": "🐘"
+    },
+    {
+      "name": "Docker",
+      "level": 65,
+      "category": "devops",
+      "icon": "🐳"
+    },
+    {
+      "name": "CSS/SASS",
+      "level": 85,
+      "category": "frontend",
+      "icon": "🎨"
+    },
+    {
+      "name": "Git",
+      "level": 80,
+      "category": "tools",
+      "icon": "📦"
+    },
+    {
+      "name": "Linux",
+      "level": 70,
+      "category": "devops",
+      "icon": "🐧"
+    },
+    {
+      "name": "TypeScript",
+      "level": 75,
+      "category": "frontend",
+      "icon": "📘"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "Task Manager Pro",
+      "description": "Полнофункциональный менеджер задач с авторизацией, drag-and-drop интерфейсом и уведомлениями",
+      "tech": [
+        "Python",
+        "Flask",
+        "PostgreSQL",
+        "Redis",
+        "WebSocket"
+      ],
+      "demo_url": "#",
+      "github_url": "#",
+      "features": [
+        "JWT авторизация",
+        "Real-time обновления",
+        "Канбан-доска",
+        "Фильтры и поиск"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "E-Commerce Platform",
+      "description": "Интернет-магазин с платёжной системой, админ-панелью и аналитикой продаж",
+      "tech": [
+        "React",
+        "Node.js",
+        "MongoDB",
+        "Stripe",
+        "Docker"
+      ],
+      "demo_url": "#",
+      "github_url": "#",
+      "features": [
+        "Stripe интеграция",
+        "Дашборд аналитики",
+        "Управление товарами",
+        "SEO оптимизация"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Chat Application",
+      "description": "Мессенджер с поддержкой групповых чатов, отправки файлов и видеозвонков",
+      "tech": [
+        "Vue.js",
+        "Socket.io",
+        "Express",
+        "MongoDB",
+        "WebRTC"
+      ],
+      "demo_url": "#",
+      "github_url": "#",
+      "features": [
+        "Групповые чаты",
+        "Video/Voice calls",
+        "Шифрование E2E",
+        "Обмен файлами"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "Freelance",
+      "position": "Full-Stack Developer",
+      "period": "2023 - настоящее время",
+      "description": "Разработка веб-приложений, работа с клиентами по всему миру"
+    },
+    {
+      "company": "StartupHub",
+      "position": "Developer",
+      "period": "2021 - 2023",
+      "description": "Создание MVP продуктов, работа с React и Python бэкендом"
+    }
+  ],
+  "stats": {
+    "projects_completed": 15,
+    "years_experience": 3,
+    "happy_clients": 10,
+    "code_commits": 800
+  }
+}
