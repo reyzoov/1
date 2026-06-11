@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ data.personal.name }} | Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-brand">&lt;Dev/&gt;</div>
+        <div class="nav-links">
+            <a href="#hero" class="nav-link active">Главная</a>
+            <a href="#about" class="nav-link">Обо мне</a>
+            <a href="#skills" class="nav-link">Навыки</a>
+            <a href="#projects" class="nav-link">Проекты</a>
+            <a href="#experience" class="nav-link">Опыт</a>
+            <a href="#contact" class="nav-link">Контакт</a>
+        </div>
+        <button class="theme-toggle" id="themeToggle">🌙</button>
+    </nav>
+
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="grid-overlay"></div>
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="greeting">Привет, я</span>
+                <h1 class="hero-name" id="typedName"></h1>
+                <h2 class="hero-title">{{ data.personal.title }}</h2>
+                <p class="hero-bio">{{ data.personal.bio }}</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">Мои проекты</a>
+                    <a href="#contact" class="btn btn-secondary">Связаться</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-target="{{ data.stats.projects_completed }}">0</span>
+                        <span class="stat-label">Проектов</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="{{ data.stats.years_experience }}">0</span>
+                        <span class="stat-label">Лет опыта</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="{{ data.stats.happy_clients }}">0</span>
+                        <span class="stat-label">Клиентов</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="{{ data.stats.code_commits }}">0</span>
+                        <span class="stat-label">Коммитов</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-window">
+                    <div class="window-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="window-title">developer.py</span>
+                    </div>
+                    <pre class="code-content"><code><span class="keyword">class</span> <span class="class-name">Developer</span>:
+    <span class="keyword">def</span> <span class="function">__init__</span>(<span class="keyword">self</span>):
+        <span class="keyword">self</span>.name = <span class="string">"{{ data.personal.name }}"</span>
+        <span class="keyword">self</span>.skills = [<span class="string">"Python"</span>, <span class="string">"JS"</span>, <span class="string">"React"</span>]
+        <span class="keyword">self</span>.passion = <span class="string">"Creating amazing apps"</span>
+
+    <span class="keyword">def</span> <span class="function">code</span>(<span class="keyword">self</span>, problem):
+        <span class="keyword">return</span> self.solve(problem)
+
+    <span class="keyword">def</span> <span class="function">learn</span>(<span class="keyword">self</span>, new_skill):
+        self.skills.append(new_skill)
+        <span class="keyword">return</span> <span class="string">"Level up! 🚀"</span>
+
+me = Developer()
+me.code(<span class="string">"awesome things"</span>)</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">Обо мне</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Я — full-stack разработчик с страстью к созданию элегантных решений сложных задач. За {{ data.stats.years_experience }} лет опыта я работал над разнообразными проектами — от стартапов до.enterprise решений.</p>
+                    <p>Мой подход: чистый код, внимание к деталям, постоянное обучение. Верю, что 좋은 программирование — это искусство решения проблем.</p>
+                    <div class="about-highlights">
+                        <div class="highlight">
+                            <span class="highlight-icon">🎯</span>
+                            <span>Чистый архитектурный код</span>
+                        </div>
+                        <div class="highlight">
+                            <span class="highlight-icon">⚡</span>
+                            <span>Оптимизация производительности</span>
+                        </div>
+                        <div class="highlight">
+                            <span class="highlight-icon">🤝</span>
+                            <span>Командная работа</span>
+                        </div>
+                        <div class="highlight">
+                            <span class="highlight-icon">📚</span>
+                            <span>Постоянное обучение</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-frame">
+                        <div class="avatar-placeholder">
+                            <span class="avatar-emoji">👨‍💻</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">Навыки</h2>
+            <div class="skills-filter">
+                <button class="filter-btn active" data-category="all">Все</button>
+                <button class="filter-btn" data-category="frontend">Frontend</button>
+                <button class="filter-btn" data-category="backend">Backend</button>
+                <button class="filter-btn" data-category="database">Базы данных</button>
+                <button class="filter-btn" data-category="devops">DevOps</button>
+            </div>
+            <div class="skills-grid" id="skillsGrid">
+                {% for skill in data.skills %}
+                <div class="skill-card" data-category="{{ skill.category }}">
+                    <div class="skill-icon">{{ skill.icon }}</div>
+                    <h3 class="skill-name">{{ skill.name }}</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-level="{{ skill.level }}"></div>
+                    </div>
+                    <span class="skill-level">{{ skill.level }}%</span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title">Проекты</h2>
+            <div class="projects-grid" id="projectsGrid">
+                {% for project in data.projects %}
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <span class="project-number">{{ project.id }}</span>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="{{ project.demo_url }}" class="project-link">Demo</a>
+                            <a href="{{ project.github_url }}" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">{{ project.title }}</h3>
+                        <p class="project-description">{{ project.description }}</p>
+                        <div class="project-tech">
+                            {% for tech in project.tech %}
+                            <span class="tech-tag">{{ tech }}</span>
+                            {% endfor %}
+                        </div>
+                        <div class="project-features">
+                            {% for feature in project.features %}
+                            <span class="feature">✓ {{ feature }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section class="experience" id="experience">
+        <div class="container">
+            <h2 class="section-title">Опыт работы</h2>
+            <div class="timeline">
+                {% for exp in data.experience %}
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-period">{{ exp.period }}</span>
+                        <h3 class="timeline-position">{{ exp.position }}</h3>
+                        <h4 class="timeline-company">{{ exp.company }}</h4>
+                        <p class="timeline-description">{{ exp.description }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Связаться со мной</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Давайте создадим что-то великое вместе!</h3>
+                    <p>Открыт для предложений о работе, интересных проектов и сотрудничества.</p>
+                    <div class="contact-links">
+                        <a href="mailto:{{ data.personal.email }}" class="contact-link">
+                            <span class="link-icon">📧</span>
+                            <span>{{ data.personal.email }}</span>
+                        </a>
+                        <a href="{{ data.personal.github }}" class="contact-link" target="_blank">
+                            <span class="link-icon">💻</span>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="#" class="contact-link">
+                            <span class="link-icon">✈️</span>
+                            <span>{{ data.personal.telegram }}</span>
+                        </a>
+                        <div class="contact-link">
+                            <span class="link-icon">📍</span>
+                            <span>{{ data.personal.location }}</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required placeholder=" ">
+                        <label for="name">Ваше имя</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required placeholder=" ">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+                        <label for="message">Сообщение</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <span>Отправить</span>
+                        <span class="btn-loading">Отправляю...</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">© 2026 {{ data.personal.name }}. Создано с ❤️ и ☕</p>
+                <div class="footer-links">
+                    <a href="{{ data.personal.github }}" target="_blank">GitHub</a>
+                    <a href="#">Telegram</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="notification" id="notification">
+        <span class="notification-text"></span>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
